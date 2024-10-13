@@ -400,3 +400,61 @@ ul li a:hover{
         top: 10%;
     }
 }
+/* Styling for the slider navigation buttons */
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10; /* Make sure it's above other elements */
+    transition: background-color 0.3s ease;
+}
+
+/* Position the previous button to the left */
+#prev {
+    left: 10px;
+}
+
+/* Position the next button to the right */
+#next {
+    right: 10px;
+}
+
+/* Hover effect to make buttons more interactive */
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Optional: Style the arrows if needed */
+#prev::before, #next::before {
+    content: '\276E'; /* Default arrow */
+    font-size: 30px;
+    display: inline-block;
+    color: white;
+}
+
+#next::before {
+    content: '\276F'; /* Right arrow */
+}
+
+/* Ensure the slider items are positioned correctly */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider .list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider .item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
